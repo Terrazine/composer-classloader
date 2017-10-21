@@ -1,0 +1,30 @@
+{
+    "name": "terrazine/composer-classloader",
+    "description": "Allows easy access to the \\Composer\\Autoload\\ClassLoader instance.",
+    "type": "wrapper",
+    "license": "inherit",
+    "authors": [
+        {
+            "name": "Patrick 'Quezler' Mounier",
+            "email": "Quezler@me.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Terrazine\\ComposerClassLoader\\": "src/"
+        }
+    },
+    "extra": {
+        "terrazine": {
+            "human": "@see terrazine/slayn"
+        },
+        "laravel": {
+            "providers": [
+                "Terrazine\\ComposerClassLoader\\TerrazineComposerClassLoaderServiceProvider"
+            ]
+        }
+    }
+}
